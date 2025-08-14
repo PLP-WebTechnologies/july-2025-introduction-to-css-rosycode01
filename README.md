@@ -1,46 +1,184 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/RyEig_hB)
-# 🎨 Assignment: CSS Basics & The Box Model
+1. Created index.html file
 
-## Overview
+Purpose
 
-This assignment introduces you to the foundational principles of CSS—how to style web content, apply essential styling properties, and understand the powerful concept of the CSS Box Model. You’ll practice writing clean, organized CSS that brings structure and visual appeal to an HTML page.
+- This is the landing page for a receptionist/visitor-management app.
+- Ithas a welcoming hero, simple navigation, check-in and check-out forms, an about section, a contact section, a static AI Assistant placeholder, testimonials, and a footer.
 
-## Objective
+Header & Navigation
 
-Your goal is to create a visually styled web page using only CSS. You will apply basic styling rules to text, backgrounds, and layout elements, and demonstrate an understanding of how the CSS Box Model affects spacing and sizing on the page.
+- Top bar with logo (placeholder image or text) and site name “SmartReception”.
+- Navigation with links that jump (anchor links) to sections on the same page:
+  Home (#home)
+  Features (#features)
+  Check In (#check-in)
+  Check Out (#check-out)
+  About (#about)
+  Contact (#contact)
 
-## What You'll Practice
+Hero (Home)
 
-* Connecting CSS to your HTML (external stylesheet)
-* Using basic CSS properties such as `color`, `font-size`, `margin`, `padding`, `border`, and `background`
-* Structuring your layout with awareness of how the Box Model influences spacing and dimensions
-* Writing clean and maintainable CSS selectors and rules
+- Prominent headline: “Welcome to SmartReception”.
+- Subheadline: “Fast, easy, and secure visitor management.”
+- A primary button styled via CSS that links to the Check In section (#check-in).
+- A hero illustration placeholder (<img> with alt text).
 
-## Instructions
+Features Section (#features)
 
-Start with a basic HTML structure and create a separate CSS file named `styles.css`. Link it to your HTML file. Apply various styles to headings, paragraphs, and container sections.
+- Grid or list of static feature descriptions such as:
+  - Digital Check-In and Check-Out
+  - Instant Host Notifications
+  - Secure Visitor Logs
+  - Appointment Scheduling
+  - Multilingual Support
+  - Touch-Free QR Check-In
+  - Cloud-Based Storage
+- Each feature has a heading and short descriptive paragraph.
 
-Use the Box Model deliberately—experiment with margin, padding, and borders to see how they affect the layout. Apply background colors to visualize box boundaries. You may also style buttons, navigation, and card-like sections to demonstrate your grasp of spacing and alignment.
+Check-In Section (#check-in)
 
-No JavaScript or external CSS libraries (like Bootstrap) should be used.
+- Short intro text.
+- Form (method="post", action="#"):
+  - Full Name (text, required)
+  - Contact Number (tel, required, basic pattern)
+  - Company / Organization (text, optional)
+  - Purpose of Visit (select: Meeting, Interview, Delivery, Maintenance, Other)
+  - Host Name (text, required)
+  - Date (date, required)
+  - Time (time, required)
+  - Terms checkbox (required): “I agree to the visitor policy.”
+  - Submit button labeled “Check In”
 
-## Deliverables
+Check-Out Section (#check-out)
 
-Submit the following files:
+- Short explanation.
+- Form (method="post", action="#"):
+  Full Name (text, required)
+  Contact Number (tel, required)
+  Time of Departure (time, required)
+  Submit button labeled “Check Out”
 
-* `index.html`: A basic HTML page with structured content.
-* `styles.css`: Your external stylesheet containing all your CSS rules.
+AI Assistant Placeholder Section
 
-Both files should work together to showcase:
+- Static box with text: “Chat with our AI Receptionist (Coming Soon)”.
+- A mock chat interface made of static HTML (no functionality).
 
-* Proper use of selectors and basic styling properties
-* Clear implementation of the CSS Box Model
-* Consistent spacing, sizing, and layout styling
+Testimonials Section
 
-## Tips
+- Two or three short testimonials in blockquotes with names and roles.
 
-* Correct linkage of HTML and CSS files
-* Use of appropriate CSS selectors and properties
-* Demonstration of the Box Model through visual layout (clear use of margin, padding, and borders)
-* Readability and organization of CSS code (indentation, comments, spacing)
-* Overall appearance and clarity of styled content
+About Section (#about)
+
+- Two short paragraphs describing SmartReception benefits.
+- A static unordered list of advantages.
+
+Contact Section (#contact)
+
+- Static address block (<address>), email mailto link, and phone tel link.
+- A simple FAQ using <details><summary> for 2–3 questions.
+
+Footer
+
+- Copyright line with the current year.
+- Links to Terms and Privacy (dummy anchors).
+- Social media text links
+
+STYLING
+
+I created an external file called styles.css
+
+FEATURES
+
+This project uses a custom CSS theme with consistent color variables, spacing rules, typography, and responsive layouts.
+Below is an overview of how the styling is structured:
+
+1. Global Reset & Variables
+
+Resets all margins, paddings, and sets box-sizing: border-box.
+
+Defines :root CSS variables for primary, secondary, light, dark colors, gradients, shadows, and border radius.
+
+Uses a modern, clean font stack:
+"Segoe UI", Tahoma, Geneva, Verdana, sans-serif.
+
+2. Layout Structure
+
+.container for centered content with responsive padding.
+
+Sticky header with box shadow and transparent white background.
+
+Main content with rounded corners, soft shadow, and alternating section backgrounds.
+
+Responsive breakpoints:
+
+@media (max-width: 768px) → tablet adjustments.
+
+@media (max-width: 480px) → mobile adjustments.
+
+3. Component Styles
+
+Header & Navigation
+
+Flexible layout with horizontal nav links.
+
+Hover and focus states for better accessibility.
+
+Hero Section
+
+Split layout with text and image (switches to stacked on mobile).
+
+Call-to-action button with smooth hover animations.
+
+Features
+
+Grid & horizontal scroll layouts for feature cards.
+
+Hover lift effect for interactivity.
+
+Forms
+
+Styled inputs, selects, textareas with focus glow.
+
+.btn-submit with smooth color transition and shadow on hover.
+
+AI Assistant
+
+Chat bubble styling for AI and user messages.
+
+Scrollable message area with clean input box.
+
+Testimonials
+
+Quote block styling with decorative quotation marks.
+
+About & Contact
+
+Checklist style lists with green checkmarks.
+
+Address cards with hover link effects.
+
+FAQ
+
+Collapsible <details> styling with smooth spacing.
+
+Footer
+
+Dark background, centered content, hover effects for links.
+
+4. Accessibility Features
+
+Skip Link for keyboard navigation.
+
+High contrast for important interactive elements.
+
+Focus states for all buttons and links.
+
+5. Color Palette
+   Variable Color
+   --primary #2c6fbb
+   --primary-light #4a8fd4
+   --secondary #3aafa9
+   --dark #2b2d42
+   --light #f8f9fa
+   --gray #6c757d
+   --light-gray

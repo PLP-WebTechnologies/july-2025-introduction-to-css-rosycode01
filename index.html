@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="SmartReception - Fast, easy, and secure visitor management"
+    />
+    <title>SmartReception - Visitor Management</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header>
+      <div class="header-container">
+        <div class="logo">SmartReception</div>
+        <nav>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#check-in">Check In</a></li>
+            <li><a href="#check-out">Check Out</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section id="home" class="hero">
+        <div class="hero-content">
+          <h1>Welcome to SmartReception</h1>
+          <p>Fast, easy, and secure visitor management.</p>
+          <a href="#check-in" class="btn-primary">Check In Now</a>
+        </div>
+        <div class="hero-image">
+          <img
+            src="hero.jpg"
+            alt="SmartReception app interface showing visitor management dashboard"
+          />
+        </div>
+      </section>
+
+      <section id="features" class="features">
+        <h2>Key Features</h2>
+        <div class="features-container">
+          <div class="features-scroller">
+            <article>
+              <h3>Digital Check-In/Out</h3>
+              <p>
+                Streamlined visitor registration with digital signatures and
+                automated processes.
+              </p>
+            </article>
+            <article>
+              <h3>Instant Host Notifications</h3>
+              <p>Automatic alerts sent to hosts when their visitors arrive.</p>
+            </article>
+            <article>
+              <h3>Secure Visitor Logs</h3>
+              <p>
+                Encrypted digital records of all visitor activity with GDPR
+                compliance.
+              </p>
+            </article>
+            <article>
+              <h3>Appointment Scheduling</h3>
+              <p>Integrated calendar system for booking visits in advance.</p>
+            </article>
+            <article>
+              <h3>Multilingual Support</h3>
+              <p>
+                Interface available in 12 languages for global accessibility.
+              </p>
+            </article>
+            <article>
+              <h3>Touch-Free QR Check-In</h3>
+              <p>Contactless registration using personalized QR codes.</p>
+            </article>
+            <article>
+              <h3>Cloud-Based Storage</h3>
+              <p>
+                Secure cloud infrastructure with daily backups and version
+                control.
+              </p>
+            </article>
+            <article>
+              <h3>Real-Time Analytics</h3>
+              <p>Dashboard with visitor metrics and trend analysis reports.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="check-in" class="form-section">
+        <h2>Visitor Check-In</h2>
+        <p>Welcome! Please complete the form below to register your visit.</p>
+        <form method="post" action="#">
+          <div class="form-group">
+            <label for="full-name">Full Name</label>
+            <input type="text" id="full-name" name="full_name" required />
+          </div>
+          <div class="form-group">
+            <label for="phone">Contact Number</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+              placeholder="123-456-7890"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="company">Company / Organization</label>
+            <input type="text" id="company" name="company" />
+          </div>
+          <div class="form-group">
+            <label for="purpose">Purpose of Visit</label>
+            <select id="purpose" name="purpose" required>
+              <option value="">Select purpose</option>
+              <option value="Meeting">Meeting</option>
+              <option value="Interview">Interview</option>
+              <option value="Delivery">Delivery</option>
+              <option value="Maintenance">Maintenance</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="host">Host Name</label>
+            <input type="text" id="host" name="host" required />
+          </div>
+          <div class="form-group">
+            <label for="date">Date</label>
+            <input type="date" id="date" name="date" required />
+          </div>
+          <div class="form-group">
+            <label for="time">Time</label>
+            <input type="time" id="time" name="time" required />
+          </div>
+          <div class="form-group checkbox">
+            <input type="checkbox" id="terms" name="terms" required />
+            <label for="terms">I agree to the visitor policy</label>
+          </div>
+          <button type="submit" class="btn-submit">Check In</button>
+        </form>
+      </section>
+
+      <section id="check-out" class="form-section">
+        <h2>Visitor Check-Out</h2>
+        <p>Thank you for visiting! Please complete your check-out process.</p>
+        <form method="post" action="#">
+          <div class="form-group">
+            <label for="checkout-name">Full Name</label>
+            <input
+              type="text"
+              id="checkout-name"
+              name="checkout_name"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="checkout-phone">Contact Number</label>
+            <input
+              type="tel"
+              id="checkout-phone"
+              name="checkout_phone"
+              pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+              placeholder="123-456-7890"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="departure-time">Time of Departure</label>
+            <input
+              type="time"
+              id="departure-time"
+              name="departure_time"
+              required
+            />
+          </div>
+          <button type="submit" class="btn-submit">Check Out</button>
+        </form>
+      </section>
+
+      <section id="ai-assistant" class="ai-assistant">
+        <h2>AI Assistant</h2>
+        <div class="chat-container">
+          <div class="chat-header">
+            Chat with our AI Receptionist (Coming Soon)
+          </div>
+          <div class="chat-messages">
+            <div class="message ai-message">
+              <p>
+                Hello! I'm your virtual receptionist. How can I help you today?
+              </p>
+            </div>
+            <div class="message user-message">
+              <p>I'm here for my 2pm meeting with Sarah</p>
+            </div>
+            <div class="message ai-message">
+              <p>
+                I've notified Sarah of your arrival. She'll be with you shortly.
+              </p>
+            </div>
+          </div>
+          <div class="chat-input">
+            <input
+              type="text"
+              placeholder="Type your message... (functionality coming soon)"
+              disabled
+            />
+            <button disabled>Send</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="testimonials" class="testimonials">
+        <h2>What Our Clients Say</h2>
+        <div class="testimonial-grid">
+          <blockquote>
+            <p>
+              "SmartReception cut our visitor processing time by 75% and
+              eliminated paperwork completely."
+            </p>
+            <footer>
+              - Michael Mucaba, <cite>Office Manager, TechGlobal Inc.</cite>
+            </footer>
+          </blockquote>
+          <blockquote>
+            <p>
+              "The automated notifications ensure we never miss a visitor. Our
+              clients love the professional touch."
+            </p>
+            <footer>
+              - Sarah Chacha, <cite>Reception Coordinator, InnovateCo</cite>
+            </footer>
+          </blockquote>
+          <blockquote>
+            <p>
+              "Implementation was seamless and the support team is exceptional.
+              Highly recommended!"
+            </p>
+            <footer>
+              - David Mbugua, <cite>Facilities Director, MetroCorp</cite>
+            </footer>
+          </blockquote>
+        </div>
+      </section>
+
+      <section id="about" class="about">
+        <h2>About SmartReception</h2>
+        <p>
+          SmartReception transforms traditional visitor management with a
+          secure, cloud-based solution that enhances security while improving
+          the visitor experience. Our system replaces paper logs with digital
+          registration that's both faster and more secure.
+        </p>
+        <p>
+          Designed for facilities of all sizes, SmartReception provides
+          enterprise-grade features with intuitive interfaces that require
+          minimal training. All visitor data is encrypted and stored in
+          compliance with global privacy regulations.
+        </p>
+
+        <h3>Key Advantages</h3>
+        <ul>
+          <li>Reduces average check-in time to under 30 seconds</li>
+          <li>Automated compliance reporting</li>
+          <li>Customizable branding options</li>
+          <li>24/7 encrypted data access</li>
+          <li>Real-time occupancy tracking</li>
+          <li>Multi-location management dashboard</li>
+        </ul>
+      </section>
+
+      <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <address>
+          <p>SmartReception Headquarters</p>
+
+          <p>
+            Email:
+            <a href="mailto:rosemuragu4@gmaill.com">rosemuragu4@gmail.com</a>
+          </p>
+          <p>Phone: <a href="tel:+254723905619">+254723905619</a></p>
+        </address>
+
+        <div class="faq">
+          <h3>Frequently Asked Questions</h3>
+          <details>
+            <summary>How quickly can we implement SmartReception?</summary>
+            <p>
+              Most organizations complete setup in under 48 hours. Our team
+              provides onboarding assistance and your reception staff can be
+              trained in less than an hour.
+            </p>
+          </details>
+          <details>
+            <summary>What hardware do we need?</summary>
+            <p>
+              SmartReception works with any modern tablet or computer. We
+              recommend iPad devices for optimal experience, but any device with
+              a modern browser will work.
+            </p>
+          </details>
+          <details>
+            <summary>Is visitor data secure?</summary>
+            <p>
+              Yes. All data is encrypted both in transit and at rest. We comply
+              with GDPR, CCPA, and ISO 27001 standards. Regular security audits
+              ensure continuous protection.
+            </p>
+          </details>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <p>
+          &copy; <span id="current-year">2025</span> SmartReception. All rights
+          reserved.
+        </p>
+        <nav>
+          <ul>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">LinkedIn</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>
